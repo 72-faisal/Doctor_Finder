@@ -1,0 +1,46 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import connection.Dbconnection;
+import model.Doctordata;
+
+public class Departmentdao {
+	
+	public static Doctordata getallCardiologydoctor(String dspeciality) {
+		Doctordata d1=null;
+		try {
+			Connection con = Dbconnection.getconnection();
+			String sql="select * from Doctordata where dspeciality=cardiologist";
+			PreparedStatement pst = con.prepareStatement(sql);
+			pst.setString(1, d1.getDname());
+			pst.setString(2, d1.getDemail());
+			pst.setString(3, d1.getDhaddress());
+			pst.setString(4, d1.getDcaddress());
+			pst.setLong(5,d1.getDContact());
+			pst.setString(6, d1.getDspeciality());
+			ResultSet rs = pst.executeQuery();
+			if(rs.next()) {
+				d1 = new Doctordata();
+				d1.setDid(rs.getInt("did"));
+				d1.setDname(rs.getString("dname"));
+				d1.setDemail(rs.getString("demail"));
+				d1.setDpassword(rs.getString("dpassword"));
+				d1.setDhaddress(rs.getString("dhaddress"));
+				d1.setDcaddress(rs.getString("dcaddress"));
+				d1.setDspeciality(rs.getString("dspeciality"));
+				d1.setDContact(rs.getLong("dcontact"));
+				
+			}
+		}
+			catch (Exception e) {
+			// TODO: handle exception
+			}
+			return d1;
+		
+		}
+		
+	}
+		
