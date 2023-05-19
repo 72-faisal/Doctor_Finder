@@ -300,7 +300,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="table-agile-info">
  <div class="panel panel-default">
     <div class="panel-heading">
-     Basic table
+     Patient Table
     </div>
     <div>
       <table class="table" ui-jq="footable" ui-options='{
@@ -319,6 +319,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <th>Name</th>
             <th>Contact</th>
             <th data-breakpoints="xs">Address</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            
+            
            
           </tr>
         </thead>
@@ -330,6 +334,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <td><%=p.getName() %></td>
             <td><%=p.getContact() %></td>
             <td><%=p.getAddress() %></td>
+         
             
          </tr>
           

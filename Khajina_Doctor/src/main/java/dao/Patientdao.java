@@ -155,4 +155,38 @@ public class Patientdao {
 		}
 		return list;
 	}
+	public static Patientdata getUserByiD(int id) {
+		Patientdata p = null;
+		try {
+			Connection conn = Dbconnection.getconnection();
+			String sql = "select * from Patientdata where id=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			ResultSet rs = pst.executeQuery();
+			if(rs.next()) {
+				p = new Patientdata();
+				p.setId(rs.getInt("id"));
+				p.setName(rs.getString("name"));
+				p.setContact(rs.getLong("contact"));
+				p.setAddress(rs.getString("address"));
+				p.setEmail(rs.getString("email"));
+				p.setPassword(rs.getString("password"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return p;
+	}
+	public static void deletUser(int id) {
+		try {
+			Connection conn = Dbconnection.getconnection();
+			String sql = "delete from Patientdata where id=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			pst.executeUpdate();
+			System.out.println("data deleted");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

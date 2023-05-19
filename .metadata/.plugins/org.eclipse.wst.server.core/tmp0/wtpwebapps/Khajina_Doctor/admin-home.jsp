@@ -281,12 +281,12 @@ else{
                 
                 <li class="sub-menu">
                     <a href="admin-doctor_list.jsp">
-                        <span>doctor</span>
+                        <span>Doctor</span>
                     </a>
                 </li>
                 <li>
                     <a href="admin_patient_list.jsp">
-                        <span>patient</span>
+                        <span>Patient</span>
                     </a>
                 </li>
                 <li class="sub-menu">
@@ -348,20 +348,7 @@ else{
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-3 market-update-gd">
-				<div class="market-update-block clr-block-4">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-					</div>
-					<div class="col-md-8 market-update-left">
-						<h4>Orders</h4>
-						<h3>1,500</h3>
-						<p>Other hand, we denounce</p>
-					</div>
-				  <div class="clearfix"> </div>
-				</div>
-			</div>
-		   <div class="clearfix"> </div>
+			<div class="clearfix"> </div>
 		</div>	
 		<!-- //market-->
 		<div class="row">

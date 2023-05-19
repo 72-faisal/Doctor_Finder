@@ -16,6 +16,7 @@ import javax.servlet.http.Part;
 import dao.Doctordao;
 import dao.Patientdao;
 import model.Doctordata;
+import model.Patientdata;
 import service.Servicesss;
 
 /**
@@ -182,6 +183,27 @@ public class DoctorController extends HttpServlet {
 				request.setAttribute("msg", "New password and confirm new password not matched");
 				request.getRequestDispatcher("Doctor-newpassword.jsp").forward(request, response);
 			}
+		}
+//		else if(action.equalsIgnoreCase("edit")) {
+//			int did = Integer.parseInt(request.getParameter("did"));
+//			Doctordata d =Doctordao.getDoctorByiD(did);
+//			request.setAttribute("Doctordata", d);
+//			request.getRequestDispatcher("admin_edit.jsp").forward(request, response);
+//		}
+//		else if(action.equalsIgnoreCase("delete")) {
+//			int did = Integer.parseInt(request.getParameter("did"));
+//			Doctordao.deleteDoctor(did);
+//			response.sendRedirect("admin_delete.jsp");
+//		}
+		else if (action.equalsIgnoreCase("aupdate")) {
+			Doctordata d = new Doctordata();
+			d.setDid(Integer.parseInt(request.getParameter("did")));
+			d.setDname(request.getParameter("dname"));
+			d.setDContact(Long.parseLong(request.getParameter("dcontact")));
+			d.setDcaddress(request.getParameter("dcaddress"));
+			d.setDemail(request.getParameter("demail"));
+			Doctordao.updateProfile(d);
+			response.sendRedirect("admin-doctor_list.jsp");
 		}
 
 	}

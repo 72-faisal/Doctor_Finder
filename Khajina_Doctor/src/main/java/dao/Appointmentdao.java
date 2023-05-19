@@ -58,7 +58,7 @@ public class Appointmentdao {
 		List<Appointmentdata> list = new ArrayList<Appointmentdata>();
 		try {
 			Connection con = Dbconnection.getconnection();
-			String sql = "select * from Appointmentdata ";
+			String sql = "select * from Appointmentdata";
 			PreparedStatement pst = con.prepareStatement(sql);
 			ResultSet rs = pst.executeQuery();
 			while (rs.next()) {

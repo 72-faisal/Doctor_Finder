@@ -341,11 +341,35 @@ import model.Doctordata;
 		}
 		return list;
 	}
+	public static Doctordata getDoctorByiD(int did) {
+		Doctordata d = null;
+		try {
+			Connection conn = Dbconnection.getconnection();
+			String sql = "select * from Doctordata where did=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, did);
+			ResultSet rs = pst.executeQuery();
+			if(rs.next()) {
+				d=new Doctordata();
+				d.setDid(rs.getInt("did"));
+				d.setDname(rs.getString("dname"));
+				d.setDemail(rs.getString("demail"));
+				d.setDpassword(rs.getString("dpassword"));
+				d.setDhaddress(rs.getString("dhaddress"));
+				d.setDcaddress(rs.getString("dcaddress"));
+				d.setDspeciality(rs.getString("dspeciality"));
+				d.setDContact(rs.getLong("dcontact"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return d;
+	}
 
 	public static void deleteDoctor(int did) {
 		try {
 			Connection conn = Dbconnection.getconnection();
-			String sql = "delete from Doctordata where Did=?";
+			String sql = "delete from Doctordata where did=?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setInt(1, did);
 			pst.executeUpdate();

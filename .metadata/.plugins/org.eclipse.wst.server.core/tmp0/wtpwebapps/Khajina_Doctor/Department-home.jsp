@@ -245,7 +245,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 				<div class="overlay">
 					<img src="images/g1.jpg" alt=" " class="img-responsive" />
 
-					<h4>Cardiology</h4>
+					<h4> Cardiology</h4>
 					<br>
 					<div class="btn-group" role="group">
 						<a href="Cardiology_department.jsp" class="btn btn-primary" >View Department</a>

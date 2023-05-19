@@ -57,8 +57,8 @@ public class AppointmentController extends HttpServlet {
 			request.setAttribute("msg", "Appointment successful");
 			HttpSession session = request.getSession();
 			session.setAttribute("data", a);
-			request.getRequestDispatcher("Show_appointment.jsp").forward(request, response);
-//			request.getRequestDispatcher("appointment.jsp").forward(request, response);
+//			response.sendRedirect("Doctor-home.jsp");
+						request.getRequestDispatcher("Show_appointment.jsp").forward(request, response);
 	}
 		else if (action.equalsIgnoreCase("update")) {
 			Appointmentdata a = new Appointmentdata();

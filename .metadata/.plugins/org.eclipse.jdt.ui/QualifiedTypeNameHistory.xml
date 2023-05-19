@@ -24,13 +24,13 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="javax.servlet.http.Part"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-    <fullyQualifiedTypeName name="model.Doctordata"/>
-    <fullyQualifiedTypeName name="dao.Doctordao"/>
-    <fullyQualifiedTypeName name="dao.Patientdao"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.Long"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="model.Patientdata"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="model.Appointmentdata"/>
+    <fullyQualifiedTypeName name="dao.Patientdao"/>
+    <fullyQualifiedTypeName name="model.Patientdata"/>
+    <fullyQualifiedTypeName name="model.Doctordata"/>
+    <fullyQualifiedTypeName name="dao.Doctordao"/>
 </qualifiedTypeNameHistroy>

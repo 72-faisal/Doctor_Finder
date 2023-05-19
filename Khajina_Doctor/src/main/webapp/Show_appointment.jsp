@@ -1,3 +1,4 @@
+<%@page import="model.Doctordata"%>
 <%@page import="model.Appointmentdata"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -38,6 +39,7 @@ Appointmentdata a  = null;
 	   response.sendRedirect("appointment.jsp");
    }
    %>
+
 <div class="banner-bottom" id="about">
 		<div class="container">
 					<h2 class="w3_heade_tittle_agile">Appointment</h2>
@@ -98,6 +100,7 @@ Appointmentdata a  = null;
 								</div>
 								<div class="clearfix"></div>
                           <button type="submit" name="action" value="update"  class="btn btn-block sent-butnn">Update</button>
+                          
 								</form>
 							</div>
 					   </div>

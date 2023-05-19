@@ -1,3 +1,5 @@
+<%@page import="dao.Appointmentdao"%>
+<%@page import="model.Appointmentdata"%>
 <%@page import="java.util.List"%>
 <%@page import="model.Patientdata"%>
 <%@page import="dao.Patientdao"%>
@@ -191,34 +193,25 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Contact Number </th>
+      <th scope="col">Symptoms</th>
     </tr>
   </thead>
   <tbody>
+  <%List<Appointmentdata> list=Appointmentdao.getallappoitment();  %>
+		<%for(Appointmentdata a:list){ %>  
   
   		
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <th scope="row"><%=a.getAppointment_id() %></th>
+      <td><%=a.getAppointment_name() %></td>
+      <td><%=a.getAppointment_number() %></td>
+      <td><%=a.getAppointment_symptoms() %></td>
     </tr>
     
+    <%} %>
   </tbody>
 </table>
 <!-- footer -->

@@ -301,7 +301,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="table-agile-info">
  <div class="panel panel-default">
     <div class="panel-heading">
-     Basic table
+     Doctor Table
     </div>
     <div>
       <table class="table" ui-jq="footable" ui-options='{
@@ -323,6 +323,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <th data-breakpoints="xs">Specialist</th>
            
             <th data-breakpoints="xs sm md" data-title="DOB">Clinic address</th>
+            <th>Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -333,9 +335,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <td><%=d.getDname() %></td>
             <td><%=d.getDContact() %></td>
             <td><%=d.getDspeciality() %></td>
-            
             <td><%=d.getDcaddress()%></td>
+            
+			
+          <td><a href="admin_edit.jsp?did=<%=d.getDid()%>">Edit</a></td>
+          <td><a href="admin_delete.jsp?did=<%=d.getDid()%>">Delete</a></td>
           </tr>
+          
+         
           
           <%} %>
         </tbody>
